@@ -1,1 +1,1 @@
-from .utils import methods_importer  # noqa: F401
+from .methods_importer import methods_importer  # noqa: F401

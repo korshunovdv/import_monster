@@ -33,7 +33,7 @@ def methods_importer(
 
             met = getattr(mod, method_name, None)
 
-            if met:
+            if met and callable(met):
                 methods.append(met)
 
         except ImportError:
