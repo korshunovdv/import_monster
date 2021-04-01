@@ -1,4 +1,4 @@
-PACKAGES="seminar_package"
+PACKAGES="import_monster"
 
 all: install black
 
@@ -15,11 +15,6 @@ clean:
 	@rm -f `find . -type f -name '*.orig' `
 	@rm -f `find . -type f -name '*.rej' `
 	@rm -rf `find . -type d -name '.pytest_cache' `
-	@rm -f .coverage
-	@rm -rf htmlcov
-	@rm -rf build
-	@rm -rf cover
-	@python setup.py clean
 	@rm -rf .tox
 	@rm -f .develop
 	@rm -f .flake
