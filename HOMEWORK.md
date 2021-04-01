@@ -21,4 +21,4 @@ Additional requirements:
 - flake8
 
 - Add requirements file
-- Add install requirements target in Makefile 
+- Add install requirements target in Makefile
