@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+  # -*- coding: utf-8 -*-
 import builtins
 import importlib
 import math
@@ -41,7 +41,7 @@ def methods_importer(
 
     return methods
 
-
-if __name__ == "__main__":
-    methods = methods_importer("sum", [math, builtins, scipy])
-    print("Test#1 is", "Ok" if random.choice(methods)([2, 2]) == 4 else "Fail")
+#
+# if __name__ == "__main__":
+#     methods = methods_importer("sum", [math, builtins, scipy])
+#     print("Test#1 is", "Ok" if random.choice(methods)([2, 2]) == 4 else "Fail")
