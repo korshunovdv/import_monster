@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import importlib
 from types import ModuleType
 from typing import Callable, List, Union
