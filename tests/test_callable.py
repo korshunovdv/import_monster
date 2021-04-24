@@ -36,3 +36,14 @@ class TestImportMonster:
     )
     def test_not_found(self, test_case, expected_result):
         assert list(methods_importer(*test_case)) == expected_result
+
+    @pytest.mark.parametrize(
+        "test_case,expected_result",
+        [
+            (("sum", [np.sum]), TypeError),
+            (("exp", [np.exp, math.exp]), TypeError),
+        ],
+    )
+    def test_not_module_or_string(self, test_case, expected_result):
+        with pytest.raises(TypeError):
+            methods_importer(*test_case)

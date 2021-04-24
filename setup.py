@@ -10,13 +10,13 @@ def read(filename: str) -> str:
 
 def parse_requirements() -> tuple:
     """Parse requirements.txt for install_requires"""
-    requirements = read('requirements.txt')
-    return tuple(requirements.split('\n'))
+    requirements = read("requirements.txt")
+    return tuple(requirements.split("\n"))
 
 
 setup(
-    name='import_monster',
-    packages=find_packages(exclude=('tests', )),
-    python_requires='~=3.8',
+    name="import_monster",
+    packages=find_packages(exclude=("tests",)),
+    python_requires="~=3.8",
     install_requires=parse_requirements(),
 )
