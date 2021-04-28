@@ -1,12 +1,7 @@
-  # -*- coding: utf-8 -*-
-import builtins
+# -*- coding: utf-8 -*-
 import importlib
-import math
-import random
 from types import ModuleType
 from typing import Callable, List, Union
-
-import scipy
 
 
 def methods_importer(
@@ -40,8 +35,3 @@ def methods_importer(
             continue
 
     return methods
-
-#
-# if __name__ == "__main__":
-#     methods = methods_importer("sum", [math, builtins, scipy])
-#     print("Test#1 is", "Ok" if random.choice(methods)([2, 2]) == 4 else "Fail")
