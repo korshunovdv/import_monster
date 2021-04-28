@@ -17,6 +17,6 @@ def parse_requirements() -> tuple:
 setup(
     name='import_monster',
     packages=find_packages(exclude=('tests', )),
-    python_requires='~=3.8',
+    python_requires='~=3.7',
     install_requires=parse_requirements(),
 )
