@@ -8,9 +8,6 @@ on:
 jobs:
   dumb:
     runs-on: ubuntu-latest
-    steps:
-      - name: Say Im alive
-        run: echo "Im alive"
 
   test:
     runs-on: ubuntu-latest
@@ -20,7 +17,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.7'
+          python-version: "3.7"
+      - name: Update pip
+        run: python -m pip install --upgrade pip
+      - name: Print python version
+        run: python -V
       - name: Install dependencies
         run: make install-dev
       - name: Test with pytest

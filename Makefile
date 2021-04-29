@@ -28,15 +28,20 @@ uninstall:
 	@pip uninstall ${PACKAGE_NAME} -y
 
 install-dev: uninstall
+	@python -m pip install --upgrade pip
 	@pip install -r ${REQUIREMENTS_DEV}
 	@pip install -e .
 
 install: uninstall
+	@python -m pip install --upgrade pip
 	@pip install -r ${REQUIREMENTS}
 	@pip install -e .
 	@echo "Done"
 
 install-pre-commit: install-dev
 	@pre-commit install
+
+run-pre-commit: install-pre-commit
+	@pre-commit run --all-files
 
 .PHONY: all install-dev uninstall clean test
